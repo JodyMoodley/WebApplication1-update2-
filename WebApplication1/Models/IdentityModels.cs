@@ -21,7 +21,7 @@ namespace WebApplication1.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("HotelConnection", throwIfV1Schema: false)
         {
         }
 
@@ -29,5 +29,20 @@ namespace WebApplication1.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Province> Provinces { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.City> Cities { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Suburb> Suburbs { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Venue> Venues { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication1.Models.Room> Rooms { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.RoomReservation> RoomReservations { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.CheckIn> CheckIns { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.CheckOut> CheckOuts { get; set; }
+        public System.Data.Entity.DbSet<WebApplication1.Models.Reservation> Reservations { get; set; }
+        //public System.Data.Entity.DbSet<WebApplication1.Models.ApplicationUser> ApplicationUsers { get; set; }
     }
 }

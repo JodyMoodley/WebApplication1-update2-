@@ -1,0 +1,62 @@
+﻿@model IEnumerable<WebApplication1.Models.Venue>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<p>
+    @using (Html.BeginForm("Index", "Venues", FormMethod.Get))
+    {
+        <b> Search By:</b>
+        @Html.RadioButton("searchBy", "Name", true)<text>Venue Name</text>
+        @Html.RadioButton("searchBy", "Address") <text> Venue Address</text>
+        @Html.RadioButton("searchBy", "Suburb") <text> Venue Suburb</text> <br />
+        @Html.TextBox("search") <input type="submit" value="Search" />
+    }
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Suburb.SuburbName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VenueName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.VenueAddress)
+        </th>
+        <th></th>
+    </tr>
+    @if (Model.Count() == 0)
+    {
+        <tr>
+            <td colspan="3">No Records Found</td>
+        </tr>
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Suburb.SuburbName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.VenueAddress)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.VenueID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.VenueID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.VenueID })
+            </td>
+        </tr>
+    }
+
+</table>

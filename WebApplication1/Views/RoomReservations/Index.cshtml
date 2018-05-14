@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication1.Models.RoomReservation>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Rooms Reservation</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Rooms.RoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rooms.RoomType)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.UserID)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CheckOut)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.Bill)
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.BookingStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACheckIn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACheckOut)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rooms.RoomID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rooms.RoomType)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.UserID)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckIn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CheckOut)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.Bill)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.BookingStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACheckIn)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACheckOut)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.RR_ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.RR_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.RR_ID })
+        </td>
+    </tr>
+}
+
+</table>

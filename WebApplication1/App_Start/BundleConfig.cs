@@ -26,6 +26,24 @@ namespace WebApplication1
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+            //Create bundel for jQueryUI   
+            //js   
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+                      "~/Scripts/jquery-ui-{version}.js"));
+            //css   
+            bundles.Add(new StyleBundle("~/Content/cssjqryUi").Include(
+                   "~/Content/jquery-ui.css"));
+
+            //    bundles.Add(new StyleBundle("~/bundles/bootstrap").Include(
+            //        "~/Scripts/bootstrap.js",
+            //        "~/Scripts/respond.js",
+            //        "~/Scripts/bootstrap-datepicker.js"));
+
+            //    bundles.Add(new StyleBundle("~/Content/css").Include(
+            //        "~/Content/bootstrap.js",
+            //        "~/Content/site.js",
+            //        "~/Content/bootstrap-datepicker.js"));
+            //}
         }
     }
 }

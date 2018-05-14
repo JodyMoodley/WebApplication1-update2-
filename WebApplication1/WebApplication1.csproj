@@ -103,13 +103,12 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="WebGrease">
-      <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
-    </Reference>
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
       <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -190,41 +189,267 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CheckInsController.cs" />
+    <Compile Include="Controllers\CheckOutsController.cs" />
+    <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProvincesController.cs" />
+    <Compile Include="Controllers\ReservationsController.cs" />
+    <Compile Include="Controllers\RolesAdminController.cs" />
+    <Compile Include="Controllers\RoomReservationsController.cs" />
+    <Compile Include="Controllers\RoomsController.cs" />
+    <Compile Include="Controllers\SuburbsController.cs" />
+    <Compile Include="Controllers\UsersAdminController.cs" />
+    <Compile Include="Controllers\VenuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201805081215247_InitialCreate.cs" />
+    <Compile Include="Migrations\201805081215247_InitialCreate.Designer.cs">
+      <DependentUpon>201805081215247_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091032282_2ndCreate.cs" />
+    <Compile Include="Migrations\201805091032282_2ndCreate.Designer.cs">
+      <DependentUpon>201805091032282_2ndCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091047355_3rdCreate.cs" />
+    <Compile Include="Migrations\201805091047355_3rdCreate.Designer.cs">
+      <DependentUpon>201805091047355_3rdCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091113086_4thCreate.cs" />
+    <Compile Include="Migrations\201805091113086_4thCreate.Designer.cs">
+      <DependentUpon>201805091113086_4thCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091116118_5thCreate.cs" />
+    <Compile Include="Migrations\201805091116118_5thCreate.Designer.cs">
+      <DependentUpon>201805091116118_5thCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805091125331_6thCreate.cs" />
+    <Compile Include="Migrations\201805091125331_6thCreate.Designer.cs">
+      <DependentUpon>201805091125331_6thCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805120902077_RCreate.cs" />
+    <Compile Include="Migrations\201805120902077_RCreate.Designer.cs">
+      <DependentUpon>201805120902077_RCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121319161_update.cs" />
+    <Compile Include="Migrations\201805121319161_update.Designer.cs">
+      <DependentUpon>201805121319161_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805122043270_edit.cs" />
+    <Compile Include="Migrations\201805122043270_edit.Designer.cs">
+      <DependentUpon>201805122043270_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805122144178_RUupadate.cs" />
+    <Compile Include="Migrations\201805122144178_RUupadate.Designer.cs">
+      <DependentUpon>201805122144178_RUupadate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805122229448_RU.cs" />
+    <Compile Include="Migrations\201805122229448_RU.Designer.cs">
+      <DependentUpon>201805122229448_RU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805131030170_Rstatusupdate.cs" />
+    <Compile Include="Migrations\201805131030170_Rstatusupdate.Designer.cs">
+      <DependentUpon>201805131030170_Rstatusupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805131739021_roomupdate.cs" />
+    <Compile Include="Migrations\201805131739021_roomupdate.Designer.cs">
+      <DependentUpon>201805131739021_roomupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132024449_roomupdate111.cs" />
+    <Compile Include="Migrations\201805132024449_roomupdate111.Designer.cs">
+      <DependentUpon>201805132024449_roomupdate111.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132035409_roomupdatekk.cs" />
+    <Compile Include="Migrations\201805132035409_roomupdatekk.Designer.cs">
+      <DependentUpon>201805132035409_roomupdatekk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132039241_roomupdatvgcg.cs" />
+    <Compile Include="Migrations\201805132039241_roomupdatvgcg.Designer.cs">
+      <DependentUpon>201805132039241_roomupdatvgcg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132052114_Addprop.cs" />
+    <Compile Include="Migrations\201805132052114_Addprop.Designer.cs">
+      <DependentUpon>201805132052114_Addprop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132245336_datatypechange.cs" />
+    <Compile Include="Migrations\201805132245336_datatypechange.Designer.cs">
+      <DependentUpon>201805132245336_datatypechange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805132259087_datatypechangek.cs" />
+    <Compile Include="Migrations\201805132259087_datatypechangek.Designer.cs">
+      <DependentUpon>201805132259087_datatypechangek.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805140900396_1.cs" />
+    <Compile Include="Migrations\201805140900396_1.Designer.cs">
+      <DependentUpon>201805140900396_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805140905107_2.cs" />
+    <Compile Include="Migrations\201805140905107_2.Designer.cs">
+      <DependentUpon>201805140905107_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805140906466_checks.cs" />
+    <Compile Include="Migrations\201805140906466_checks.Designer.cs">
+      <DependentUpon>201805140906466_checks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805141106093_dbiisis.cs" />
+    <Compile Include="Migrations\201805141106093_dbiisis.Designer.cs">
+      <DependentUpon>201805141106093_dbiisis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805141129346_final.cs" />
+    <Compile Include="Migrations\201805141129346_final.Designer.cs">
+      <DependentUpon>201805141129346_final.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805141130387_final2.cs" />
+    <Compile Include="Migrations\201805141130387_final2.Designer.cs">
+      <DependentUpon>201805141130387_final2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AdminViewModel.cs" />
+    <Compile Include="Models\CheckIn.cs" />
+    <Compile Include="Models\CheckOut.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Province.cs" />
+    <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\Room.cs" />
+    <Compile Include="Models\RoomReservation.cs" />
+    <Compile Include="Models\Suburb.cs" />
+    <Compile Include="Models\Venue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-datetimepicker.css" />
+    <Content Include="Content\bootstrap-datetimepicker.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap-datetimepicker.js" />
+    <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap\wells.less" />
+    <Content Include="Content\bootstrap\variables.less" />
+    <Content Include="Content\bootstrap\utilities.less" />
+    <Content Include="Content\bootstrap\type.less" />
+    <Content Include="Content\bootstrap\tooltip.less" />
+    <Content Include="Content\bootstrap\thumbnails.less" />
+    <Content Include="Content\bootstrap\theme.less" />
+    <Content Include="Content\bootstrap\tables.less" />
+    <Content Include="Content\bootstrap\scaffolding.less" />
+    <Content Include="Content\bootstrap\responsive-utilities.less" />
+    <Content Include="Content\bootstrap\responsive-embed.less" />
+    <Content Include="Content\bootstrap\progress-bars.less" />
+    <Content Include="Content\bootstrap\print.less" />
+    <Content Include="Content\bootstrap\popovers.less" />
+    <Content Include="Content\bootstrap\panels.less" />
+    <Content Include="Content\bootstrap\pagination.less" />
+    <Content Include="Content\bootstrap\pager.less" />
+    <Content Include="Content\bootstrap\normalize.less" />
+    <Content Include="Content\bootstrap\navs.less" />
+    <Content Include="Content\bootstrap\navbar.less" />
+    <Content Include="Content\bootstrap\modals.less" />
+    <Content Include="Content\bootstrap\mixins\vendor-prefixes.less" />
+    <Content Include="Content\bootstrap\mixins\text-overflow.less" />
+    <Content Include="Content\bootstrap\mixins\text-emphasis.less" />
+    <Content Include="Content\bootstrap\mixins\table-row.less" />
+    <Content Include="Content\bootstrap\mixins\tab-focus.less" />
+    <Content Include="Content\bootstrap\mixins\size.less" />
+    <Content Include="Content\bootstrap\mixins\responsive-visibility.less" />
+    <Content Include="Content\bootstrap\mixins\resize.less" />
+    <Content Include="Content\bootstrap\mixins\reset-text.less" />
+    <Content Include="Content\bootstrap\mixins\reset-filter.less" />
+    <Content Include="Content\bootstrap\mixins\progress-bar.less" />
+    <Content Include="Content\bootstrap\mixins\panels.less" />
+    <Content Include="Content\bootstrap\mixins\pagination.less" />
+    <Content Include="Content\bootstrap\mixins\opacity.less" />
+    <Content Include="Content\bootstrap\mixins\nav-vertical-align.less" />
+    <Content Include="Content\bootstrap\mixins\nav-divider.less" />
+    <Content Include="Content\bootstrap\mixins\list-group.less" />
+    <Content Include="Content\bootstrap\mixins\labels.less" />
+    <Content Include="Content\bootstrap\mixins\image.less" />
+    <Content Include="Content\bootstrap\mixins\hide-text.less" />
+    <Content Include="Content\bootstrap\mixins\grid.less" />
+    <Content Include="Content\bootstrap\mixins\grid-framework.less" />
+    <Content Include="Content\bootstrap\mixins\gradients.less" />
+    <Content Include="Content\bootstrap\mixins\forms.less" />
+    <Content Include="Content\bootstrap\mixins\clearfix.less" />
+    <Content Include="Content\bootstrap\mixins\center-block.less" />
+    <Content Include="Content\bootstrap\mixins\buttons.less" />
+    <Content Include="Content\bootstrap\mixins\border-radius.less" />
+    <Content Include="Content\bootstrap\mixins\background-variant.less" />
+    <Content Include="Content\bootstrap\mixins\alerts.less" />
+    <Content Include="Content\bootstrap\mixins.less" />
+    <Content Include="Content\bootstrap\media.less" />
+    <Content Include="Content\bootstrap\list-group.less" />
+    <Content Include="Content\bootstrap\labels.less" />
+    <Content Include="Content\bootstrap\jumbotron.less" />
+    <Content Include="Content\bootstrap\input-groups.less" />
+    <Content Include="Content\bootstrap\grid.less" />
+    <Content Include="Content\bootstrap\glyphicons.less" />
+    <Content Include="Content\bootstrap\forms.less" />
+    <Content Include="Content\bootstrap\dropdowns.less" />
+    <Content Include="Content\bootstrap\component-animations.less" />
+    <Content Include="Content\bootstrap\code.less" />
+    <Content Include="Content\bootstrap\close.less" />
+    <Content Include="Content\bootstrap\carousel.less" />
+    <Content Include="Content\bootstrap\buttons.less" />
+    <Content Include="Content\bootstrap\button-groups.less" />
+    <Content Include="Content\bootstrap\breadcrumbs.less" />
+    <Content Include="Content\bootstrap\bootstrap.less" />
+    <Content Include="Content\bootstrap\badges.less" />
+    <Content Include="Content\bootstrap\alerts.less" />
+    <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Content\bootstrap-datetimepicker-build.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\HotelApp301 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\WebApplication120180509110710 - Web Deploy.pubxml" />
+    <None Include="Scripts\jquery-1.12.4.intellisense.js" />
+    <Content Include="Scripts\jquery-1.12.4.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.js" />
+    <Content Include="Scripts\jquery-1.12.4.min.map" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\moment-with-locales.js" />
+    <Content Include="Scripts\moment-with-locales.min.js" />
+    <Content Include="Scripts\moment.js" />
+    <Content Include="Scripts\moment.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Views\Reservations\Create.cshtml" />
+    <Content Include="Views\Reservations\Delete.cshtml" />
+    <Content Include="Views\Reservations\Details.cshtml" />
+    <Content Include="Views\Reservations\Edit.cshtml" />
+    <Content Include="Views\Reservations\Index.cshtml" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -258,22 +483,140 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\RolesAdmin\Index.cshtml" />
+    <Content Include="Views\RolesAdmin\Details.cshtml" />
+    <Content Include="Views\RolesAdmin\Create.cshtml" />
+    <Content Include="Views\RolesAdmin\Edit.cshtml" />
+    <Content Include="Views\RolesAdmin\Delete.cshtml" />
+    <Content Include="Views\UsersAdmin\Index.cshtml" />
+    <Content Include="Views\UsersAdmin\Details.cshtml" />
+    <Content Include="Views\UsersAdmin\Create.cshtml" />
+    <Content Include="Views\UsersAdmin\Edit.cshtml" />
+    <Content Include="Views\UsersAdmin\Delete.cshtml" />
+    <Content Include="Views\Account\DisplayEmail.cshtml" />
+    <Content Include="Views\Provinces\Create.cshtml" />
+    <Content Include="Views\Provinces\Delete.cshtml" />
+    <Content Include="Views\Provinces\Details.cshtml" />
+    <Content Include="Views\Provinces\Edit.cshtml" />
+    <Content Include="Views\Provinces\Index.cshtml" />
+    <Content Include="Views\Cities\Create.cshtml" />
+    <Content Include="Views\Cities\Delete.cshtml" />
+    <Content Include="Views\Cities\Details.cshtml" />
+    <Content Include="Views\Cities\Edit.cshtml" />
+    <Content Include="Views\Cities\Index.cshtml" />
+    <Content Include="Views\Suburbs\Create.cshtml" />
+    <Content Include="Views\Suburbs\Delete.cshtml" />
+    <Content Include="Views\Suburbs\Details.cshtml" />
+    <Content Include="Views\Suburbs\Edit.cshtml" />
+    <Content Include="Views\Suburbs\Index.cshtml" />
+    <Content Include="Views\Venues\Create.cshtml" />
+    <Content Include="Views\Venues\Delete.cshtml" />
+    <Content Include="Views\Venues\Details.cshtml" />
+    <Content Include="Views\Venues\Edit.cshtml" />
+    <Content Include="Views\Venues\Index.cshtml" />
+    <Content Include="Views\Rooms\Create.cshtml" />
+    <Content Include="Views\Rooms\Delete.cshtml" />
+    <Content Include="Views\Rooms\Details.cshtml" />
+    <Content Include="Views\Rooms\Edit.cshtml" />
+    <Content Include="Views\Rooms\Index.cshtml" />
+    <Content Include="Views\RoomReservations\Create.cshtml" />
+    <Content Include="Views\RoomReservations\Delete.cshtml" />
+    <Content Include="Views\RoomReservations\Details.cshtml" />
+    <Content Include="Views\RoomReservations\Edit.cshtml" />
+    <Content Include="Views\RoomReservations\Index.cshtml" />
+    <Content Include="Views\CheckIns\Create.cshtml" />
+    <Content Include="Views\CheckIns\Delete.cshtml" />
+    <Content Include="Views\CheckIns\Details.cshtml" />
+    <Content Include="Views\CheckIns\Edit.cshtml" />
+    <Content Include="Views\CheckIns\Index.cshtml" />
+    <Content Include="Views\CheckOuts\Create.cshtml" />
+    <Content Include="Views\CheckOuts\Delete.cshtml" />
+    <Content Include="Views\CheckOuts\Details.cshtml" />
+    <Content Include="Views\CheckOuts\Edit.cshtml" />
+    <Content Include="Views\CheckOuts\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805081215247_InitialCreate.resx">
+      <DependentUpon>201805081215247_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091032282_2ndCreate.resx">
+      <DependentUpon>201805091032282_2ndCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091047355_3rdCreate.resx">
+      <DependentUpon>201805091047355_3rdCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091113086_4thCreate.resx">
+      <DependentUpon>201805091113086_4thCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091116118_5thCreate.resx">
+      <DependentUpon>201805091116118_5thCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805091125331_6thCreate.resx">
+      <DependentUpon>201805091125331_6thCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805120902077_RCreate.resx">
+      <DependentUpon>201805120902077_RCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121319161_update.resx">
+      <DependentUpon>201805121319161_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805122043270_edit.resx">
+      <DependentUpon>201805122043270_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805122144178_RUupadate.resx">
+      <DependentUpon>201805122144178_RUupadate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805122229448_RU.resx">
+      <DependentUpon>201805122229448_RU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805131030170_Rstatusupdate.resx">
+      <DependentUpon>201805131030170_Rstatusupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805131739021_roomupdate.resx">
+      <DependentUpon>201805131739021_roomupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132024449_roomupdate111.resx">
+      <DependentUpon>201805132024449_roomupdate111.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132035409_roomupdatekk.resx">
+      <DependentUpon>201805132035409_roomupdatekk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132039241_roomupdatvgcg.resx">
+      <DependentUpon>201805132039241_roomupdatvgcg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132052114_Addprop.resx">
+      <DependentUpon>201805132052114_Addprop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132245336_datatypechange.resx">
+      <DependentUpon>201805132245336_datatypechange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805132259087_datatypechangek.resx">
+      <DependentUpon>201805132259087_datatypechangek.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140900396_1.resx">
+      <DependentUpon>201805140900396_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140905107_2.resx">
+      <DependentUpon>201805140905107_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805140906466_checks.resx">
+      <DependentUpon>201805140906466_checks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141106093_dbiisis.resx">
+      <DependentUpon>201805141106093_dbiisis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141129346_final.resx">
+      <DependentUpon>201805141129346_final.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805141130387_final2.resx">
+      <DependentUpon>201805141130387_final2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
